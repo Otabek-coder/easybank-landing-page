@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+
 const Container = styled.div`
 border-radius: 5px;
 overflow: hidden;
@@ -12,7 +13,6 @@ background-color: hsl(0, 0%, 100%);
 
     box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
 }
-
 
 .img-container{
     height: 50%;
@@ -43,12 +43,12 @@ line-height: 1.4;
 
 }
 `;
-export default function Carrers({ title, text, image, author }) {
+export default function ArticleCard({ title, text, image, author }) {
   return (
     <Container>
-        <div className="img-container">
+      <div className="img-container">
 
-        </div>
+      </div>
       <img src={image} alt="blog-img" />
 
       <TextContainer>

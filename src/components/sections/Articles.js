@@ -1,12 +1,12 @@
 import React from "react";
-import Articles from "../components/Articles";
-import styles from "../styles/Grid.module.css";
-import CareerData from "../data/blog.json";
+import ArticleCard from "src/components/ArticleCard";
+import styles from "src/styles/Grid.module.css";
+import CareerData from "src/data/blog.json";
 
-export default function Article() {
+export default function Articles() {
   const blog = CareerData.map((item) => {
     return (
-      <Articles
+      <ArticleCard
         key={item.id}
         title={item.title}
         text={item.text}
@@ -15,6 +15,7 @@ export default function Article() {
       />
     );
   });
+
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Latest Articles</h1>

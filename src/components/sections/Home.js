@@ -93,7 +93,7 @@ const Button = styled.button`
   }
 `;
 
-function About() {
+export default function Home() {
   return (
     <Container>
       <InfoContainer>
@@ -116,4 +116,3 @@ function About() {
   );
 }
 
-export default About;

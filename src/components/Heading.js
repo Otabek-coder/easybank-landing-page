@@ -40,7 +40,7 @@ export default function Heading() {
         <img src="/images/logo.svg" alt="Brand-logo" />
       </div>
 
-      {/* <nav>
+      <nav>
         <ul>
           <li> Home</li>
           <li>About</li>
@@ -48,7 +48,7 @@ export default function Heading() {
           <li>Blog</li>
           <li>Careers</li>
         </ul>
-      </nav> */}
+      </nav>
 
       <Button>Request Invite</Button>
     </Header>

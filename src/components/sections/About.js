@@ -1,7 +1,7 @@
 import React from "react";
-import Carrers from "../components/Carrers";
-import styles from "../styles/Grid.module.css";
-import CareerData from "../data/career.json";
+import AboutCard from "src/components/AboutCard";
+import styles from "src/styles/Grid.module.css";
+import aboutData from "src/data/about.json";
 import styled from "styled-components";
 
 const Title = styled.h1`
@@ -14,10 +14,10 @@ font-weight: 300;
 line-height: 1.5;
 color: hsl(233, 8%, 62%);
 `
-export default function Career() {
-  const card = CareerData.map((item) => {
+export default function About() {
+  const card = aboutData.map((item) => {
     return (
-      <Carrers
+      <AboutCard
         key={item.id}
         title={item.title}
         text={item.text}

@@ -1,14 +1,11 @@
 import Head from "next/head";
 import Heading from "../components/Heading";
-import About from "./about";
-import Career from "./career";
-import Article from "./article";
-import Contact from "./contact";
+import { Home, Articles, About, Contact } from "../components/sections";
 import styled from "styled-components";
 const Wrapper = styled.div`
   width: 100%;
 `;
-export default function Home() {
+export default function Index() {
   return (
     <Wrapper>
       <Head>
@@ -17,9 +14,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Heading />
+      <Home />
       <About />
-      <Career />
-      <Article />
+      <Articles />
       <Contact />
     </Wrapper>
   );
