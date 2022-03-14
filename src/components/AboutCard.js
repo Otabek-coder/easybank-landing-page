@@ -14,7 +14,7 @@ p{
     line-height: 1.5;
 }
 `
-export default function Carrers({ title, text, image }) {
+export default function Careers({ title, text, image }) {
   return (
     < Container>
       <img src={image} alt="img" />

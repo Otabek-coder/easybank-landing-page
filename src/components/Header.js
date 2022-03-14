@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-const Header = styled.header`
+
+const HeaderContainer = styled.header`
   display: flex;
   justify-content: space-around;
   padding: 1em 0em;
@@ -33,9 +34,10 @@ cursor: pointer;
   
 }
 `;
-export default function Heading() {
+
+export default function Header() {
   return (
-    <Header>
+    <HeaderContainer>
       <div>
         <img src="/images/logo.svg" alt="Brand-logo" />
       </div>
@@ -51,6 +53,6 @@ export default function Heading() {
       </nav>
 
       <Button>Request Invite</Button>
-    </Header>
+    </HeaderContainer>
   );
 }

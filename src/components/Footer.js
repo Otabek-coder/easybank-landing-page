@@ -122,24 +122,24 @@ export default function Contact() {
 
         <ul>
           <li>
-            <a href="http://">About Us</a>
+            <a href="#about">About Us</a>
           </li>
           <li>
-            <a href="http://">Contact</a>
+            <a href="#contact">Contact</a>
           </li>
           <li>
-            <a href="http://">Blog</a>
+            <a href="/">Blog</a>
           </li>
         </ul>
         <ul>
           <li>
-            <a href="http://">Carrers</a>
+            <a href="/">Careers</a>
           </li>
           <li>
-            <a href="http://">Support</a>
+            <a href="/">Support</a>
           </li>
           <li>
-            <a href="http://">Privacy Policy</a>
+            <a href="/">Privacy Policy</a>
           </li>
         </ul>
 
