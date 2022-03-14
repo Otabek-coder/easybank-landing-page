@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useState, useRef } from "react";
+import { useDimensions } from 'src/hooks'
+import { motion } from 'framer-motion'
 import styled from "styled-components";
+import { MenuToggle } from "./MenuToggle";
+import MobileHeader from "./MobileHeader";
+import Link from "next/link";
 
 const HeaderContainer = styled.header`
   display: flex;
   justify-content: space-around;
   padding: 1em 0em;
   align-items: center;
+  border-left: .1px solid hsl(220, 16%, 96%); 
+  border-right: .1px solid hsl(220, 16%, 96%); 
 
   nav > ul {
     display: flex;
@@ -16,6 +23,16 @@ const HeaderContainer = styled.header`
     font-weight: 300;
     color: hsl(233, 8%, 62%);
   }
+  nav > ul > li a {
+      color: hsl(233, 8%, 62%);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    @media(max-width:50em){
+margin: 0em 1em;
+/* padding: 0.5em 0em; */
+      justify-content: space-between;
+    }
 `;
 
 
@@ -36,23 +53,59 @@ cursor: pointer;
 `;
 
 export default function Header() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
   return (
-    <HeaderContainer>
-      <div>
-        <img src="/images/logo.svg" alt="Brand-logo" />
+    <>
+      <HeaderContainer>
+        <div>
+          <img src="/images/logo.svg" alt="Brand-logo" />
+        </div>
+
+        <div className="desktop-only">
+          <nav>
+            <ul>
+              <li>
+                <Link href="#intro">
+                  <a>Home</a>
+                </Link>
+              </li>
+              <li>
+                <Link href='#about'>
+                  <a>About</a>
+                </Link>
+              </li>
+              <li>
+                <Link href='#contact'>
+                  <a>Contact</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="#blog">
+                  <a>Blog</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="#career">
+                  <a>Careers</a>
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div className="desktop-only">
+          <Button>Request Invite</Button>
+        </div>
+        <div className="mobile-only">
+          <MenuToggle toggle={() => setMobileMenuOpen(b => !b)} open={mobileMenuOpen} />
+        </div>
+      </HeaderContainer>
+      <div className="mobile-only">
+        <MobileHeader
+          mobileMenuOpen={mobileMenuOpen}
+          setMobileMenuOpen={setMobileMenuOpen}
+        />
       </div>
-
-      <nav>
-        <ul>
-          <li> Home</li>
-          <li>About</li>
-          <li>Contact</li>
-          <li>Blog</li>
-          <li>Careers</li>
-        </ul>
-      </nav>
-
-      <Button>Request Invite</Button>
-    </HeaderContainer>
+    </>
   );
 }

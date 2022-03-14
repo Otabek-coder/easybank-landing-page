@@ -95,7 +95,7 @@ const Button = styled.button`
 
 export default function Home() {
   return (
-    <Container>
+    <Container id="intro">
       <InfoContainer>
         <main>
           <h1>

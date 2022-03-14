@@ -26,7 +26,7 @@ export default function About() {
     );
   });
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} id='about'>
       <Title>Why Choose Easybank?</Title>
       <SubTitle>
         We leverage Open Banking to turn your bank account into your financial

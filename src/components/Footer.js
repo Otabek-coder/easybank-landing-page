@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
 
@@ -103,7 +104,7 @@ const Button = styled.button`
 `;
 export default function Contact() {
   return (
-    <Wrapper>
+    <Wrapper id="contact">
       <DetailsContainer>
         <div className="margin">
           <img
@@ -122,24 +123,36 @@ export default function Contact() {
 
         <ul>
           <li>
-            <a href="#about">About Us</a>
+            <Link href="#about">
+              <a>About Us</a>
+            </Link>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <Link href="/">
+              <a>Contact</a>
+            </Link>
           </li>
           <li>
-            <a href="/">Blog</a>
+            <Link href="#blog">
+              <a>Blog</a>
+            </Link>
           </li>
         </ul>
         <ul>
           <li>
-            <a href="/">Careers</a>
+            <Link href="/">
+              <a>Careers</a>
+            </Link>
           </li>
           <li>
-            <a href="/">Support</a>
+            <Link href="/">
+              <a>Support</a>
+            </Link>
           </li>
           <li>
-            <a href="/">Privacy Policy</a>
+            <Link href="/">
+              <a>Privacy Policy</a>
+            </Link>
           </li>
         </ul>
 

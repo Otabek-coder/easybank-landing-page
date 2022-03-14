@@ -16,7 +16,7 @@ p{
 `
 export default function Careers({ title, text, image }) {
   return (
-    < Container>
+    < Container id="career">
       <img src={image} alt="img" />
       <h1>{title}</h1>
       <p>{text}</p>

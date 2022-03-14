@@ -6,7 +6,7 @@ import CareerData from "src/data/blog.json";
 export default function Articles() {
   const blog = CareerData.map((item) => {
     return (
-      <ArticleCard
+      <ArticleCard 
         key={item.id}
         title={item.title}
         text={item.text}
@@ -17,7 +17,7 @@ export default function Articles() {
   });
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id='blog'>
       <h1 className={styles.title}>Latest Articles</h1>
       <div>
         <div className={styles.blog}>{blog}</div>
