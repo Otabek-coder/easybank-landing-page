@@ -104,6 +104,7 @@ export default function Header() {
         <MobileHeader
           mobileMenuOpen={mobileMenuOpen}
           setMobileMenuOpen={setMobileMenuOpen}
+          toggle={() => setMobileMenuOpen(b => !b)} open={mobileMenuOpen}
         />
       </div>
     </>

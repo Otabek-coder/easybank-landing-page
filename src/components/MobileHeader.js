@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import styled from "styled-components";
 import Link from "next/link";
 
-export default function MobileHeader({ mobileMenuOpen, setMobileMenuOpen }) {
+export default function MobileHeader({ mobileMenuOpen, setMobileMenuOpen, toggle }) {
   const overlayVariants = {
     visible: {
       opacity: 1,
@@ -33,8 +33,8 @@ export default function MobileHeader({ mobileMenuOpen, setMobileMenuOpen }) {
           >
             <motion.div className="modal" transition={{ duration: 0.3 }}>
               <nav className="modal-content">
-                <ul>
-                  <li>
+                <ul onClick={toggle}>
+                  <li >
                     <Link href="#intro">
                       <a>Home</a>
                     </Link>

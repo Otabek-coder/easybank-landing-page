@@ -52,11 +52,6 @@ export const MenuToggle = ({ toggle, open }) => {
 };
 
 const Container = styled.div`
-  // position: absolute;
-  // top: 0;
-  // left: 0;
-  // bottom: 0;
-  // width: 300px;
   background: none;
   z-index: 99;
 
@@ -64,9 +59,6 @@ const Container = styled.div`
     outline: none;
     border: none;
     cursor: pointer;
-    /* position: absolute;
-    top: 18px;
-    left: 15px; */
     width: 50px;
     height: 50px;
     border-radius: 50%;
