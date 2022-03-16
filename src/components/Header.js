@@ -58,9 +58,11 @@ export default function Header() {
   return (
     <>
       <HeaderContainer>
+        <Link href="/">
         <div>
           <img src="/images/logo.svg" alt="Brand-logo" />
         </div>
+        </Link>
 
         <div className="desktop-only">
           <nav>

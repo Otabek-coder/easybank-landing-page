@@ -107,11 +107,13 @@ export default function Contact() {
     <Wrapper id="contact">
       <DetailsContainer>
         <div className="margin">
+          <Link href="/">
           <img
             src="/images/logo-footer.svg"
             alt="Brand-logo"
             className="brand-logo"
           />
+          </Link>
           <div className="images">
             <img src="/images/icon-facebook.svg" alt="facebook-icon" />
             <img src="/images/icon-youtube.svg" alt="youtube-icon" />
